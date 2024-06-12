@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chi tiết sản phẩm</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .sanpham {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .hinhanhsp {
+            flex: 1;
+            max-width: 600px;
+            margin-right: 40px;
+        }
+
+        .hinhanhsp img {
+            width: 100%;
+            height: auto;
+        }
+
+        .anhmin {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .anhmin img {
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .anhmin img:hover {
+            transform: scale(1.1);
+        }
+
+        .thongtinsp {
+            flex: 1;
+        }
+
+        .thongtinsp h2 {
+            font-size: 24px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .thongtinsp .gia {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .thongtinsp .giamgia {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .thongtinsp .themvaogiohang {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+
+        .thongtinsp .motasp {
+            margin-top: 20px;
+        }
+
+        .thongtinsp .chitietsp {
+            margin-top: 20px;
+        }
+
+        .thanhchan {
+            border: none;
+            border-top: 1px solid black;
+        }
+        .chitietsp img {
+          width: 100%;
+          height: auto;;
+        }
+        @media (max-width: 768px) {
+            .sanpham {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hinhanhsp {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .thongtinsp {
+                text-align: center;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sanpham">
+            <div class="hinhanhsp">
+                <img src="./1vf8.webp" id="anh-chinh">
+                <div class="anhmin">
+                    <img src="./2vf8.webp" onmouseenter="thayDoiHinhAnh('./2vf8.webp')">
+                    <img src="./3vf8.webp" onmouseenter="thayDoiHinhAnh('./3vf8.webp')">
+                    <img src="./4vf8.webp" onmouseenter="thayDoiHinhAnh('./4vf8.webp')">
+                    <img src="./5vf8.webp" onmouseenter="thayDoiHinhAnh('./5vf8.webp')">
+                </div>
+            </div>
+            <div class="thongtinsp">
+                <h2>VF8</h2>
+                <p class="gia">Giá:1 tỷ 500 triệu</p>
+                <p class="giamgia">Giá sau thuế:1 tỷ 501 triệu</p>
+
+            </div>
+        </div>
+        <div class="thanhchan">
+          <div class="chitietsp">
+            <h3>Mô tả sản phẩm</h3>
+            <p>VinFast VF 8 là mẫu xe ô tô điện 5 chỗ ngồi, kiểu dáng SUV, định vị ở phân khúc D. Hiện tại, VinFast VF 8 có 2 phiên bản là VinFast VF 8 Eco và VF 8 Plus.</p>
+          <img src="./2vf8.webp" alt="" onclick="link()">
+        </div>
+        </div>
+    </div>
+
+    <script>
+        function thayDoiHinhAnh(hinhanh) {
+            var Chinh = document.getElementById('anh-chinh');
+            Chinh.src = hinhanh;
+        }
+
+        function themVaoGioHang() {
+            var ThemVaoGioHang = document.querySelector('.themvaogiohang');
+            if (ThemVaoGioHang.classList.contains('dathem')) {
+                alert('Sản phẩm đã được xoá khỏi giỏ hàng');
+            } else {
+                ThemVaoGioHang.classList.add('dathem');
+                alert('Đã thêm vào giỏ hàng');
+            }
+        }
+        function link(){
+            window.location.href ="https://vinfastnewway.com.vn/san-pham/vinfast-vf-8/";
+        }
+    </script>
+</body>
+
+</html>

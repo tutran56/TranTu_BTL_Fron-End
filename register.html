@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-decoration: none ;
+}
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+  .container {
+    max-width: 350px;
+    background: #f8f9fd;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    margin: 20px;
+  }
+  
+  .heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(16, 137, 211);
+  }
+  
+  .form {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+  .form .input {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+  }
+  
+  .form .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input::placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input:focus {
+    outline: none;
+    border-inline: 2px solid #12b1d1;
+  }
+  
+  .form .forgot-password {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .form .forgot-password a {
+    font-size: 11px;
+    color: #0099ff;
+    text-decoration: none;
+  }
+  
+  .form .login-button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form .login-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+  }
+  
+  .form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+  }
+  
+  .agreement {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .agreement a {
+    text-decoration: none;
+    color: #0099ff;
+    font-size: 18px;
+  }
+  
+  input[type="reset"] {
+    background-color: #0099ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 20px;
+  }
+  
+  input[type="reset"]:hover {
+    transform: scale(.9);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+  }
+  
+  input[type="reset"]:active {
+    transform: scale(.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+  }
+  header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+.logo img {
+    max-width: 80px;
+    height: auto;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color:black;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding:10px 20px ;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu a:hover{
+    color: red;
+}
+.nav-icon {
+    display: flex;
+    align-items:center ;
+}
+.nav-icon i{
+    margin-right:25px ;
+    color:black;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.nav-icon i:hover {
+    transform: scale(1.5);
+    color:red;
+}
+#menu-icon{
+font-size: 35px;
+color: black;
+z-index: 10001;
+cursor: pointer;
+}
+section{
+    padding:5% 10% ;
+}
+
+.header.sticky {
+background-color:rgba(255, 255, 255, 0.5);
+padding: 20px 10%;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+    </style>
+  </head>
+  <body>
+
+    <header class ="header sticky">
+      <a href="index.html" class = "logo"><img src="./background-login.png" alt=""> </a>
+      <ul class="navmenu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#">Liên Hệ</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Tin tức</a></li>
+      </ul>
+  
+      <div class ="nav-icon">
+          <a href="#"> <i class='bx bx-search'></i></a>
+          <span onclick="gotoLogin()"><i class='bx bx-user'></i></span>
+        
+  
+          <div class=" bx bx-menu" id ="menu-icon"></div>
+      </div>
+  </header>
+    <div class="container">
+      <div class="heading">Đăng ký</div>
+      <form class="form" onsubmit="return validateForm()">
+        <input
+          placeholder="Tên Đăng Nhập"
+          id="username"
+          name="username"
+          type="text"
+          class="input"
+        />
+        <input
+          placeholder="Mật Khẩu"
+          id="password"
+          name="password"
+          type="password"
+          class="input"
+        />
+        <input
+          placeholder="Nhập lại Mật Khẩu"
+          id="repassword"
+          name="repassword"
+          type="password"
+          class="input"
+        />
+        <input
+          placeholder="Email"
+          id="email"
+          name="email"
+          type="email"
+          class="input"
+        />
+        <input value="Đăng ký" type="submit" class="login-button" />
+        <span class="agreement">Đã có tài khoản? <a href="login.html">Đăng nhập</a></span>
+      </form>
+    </div>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var repassword = document.getElementById("repassword").value;
+        var email = document.getElementById("email").value;
+
+        if (username.trim() === "" || password.trim() === "" || repassword.trim() === "" || email.trim() === "") {
+          alert("Vui lòng điền đầy đủ thông tin đăng ký.");
+          return false;
+        }
+
+        if (password.length < 8) {
+          alert("Mật khẩu phải từ 8 ký tự trở lên.");
+          return false;
+        }
+
+        if (password !== repassword) {
+          alert("Mật khẩu và Nhập lại Mật khẩu không khớp.");
+          return false;
+        }
+
+        if (!ConfirmEmail(email)) {
+          alert("Vui lòng nhập đúng định dạng Email.");
+          return false;
+        }
+        else{
+        alert("Đăng ký thành công!\n\n Tên Đăng Nhập:"+username+"\n\n Email:"+email);
+        window.location.assign("login.html");
+
+        return false;
+        }
+      }
+
+      //Kiểm tra xem đúng định dạng email chưa
+  function ConfirmEmail(emaill) {
+    const kt = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return kt.test(emaill);
+  }
+  
+  function Vetrangchu(){
+    window.location.assign("index.html");
+  }
+    </script>
+  </body>
+</html>

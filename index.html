@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web VinFast</title>
+<link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+
+<header class ="header sticky">
+    <a href="#" class = "logo"><img src="./logo.jpeg" alt=""> </a>
+    <ul class="navmenu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#" onclick="lienhe()">Liên Hệ</a></li>
+        <li><a href="#" onclick="sanpham()">Sản phẩm</a></li>
+        <li><a href="#" onclick="news()">Tin tức</a></li>
+    </ul>
+
+    <div class ="nav-icon">
+        <a href="#"> <i class='bx bx-search'></i></a>
+        <span onclick="gotoLogin()"><i class='bx bx-user'></i></span>
+        <a href="#" onclick="giohang()"><i class='bx bx-cart'></i></a>
+
+        <div class=" bx bx-menu" id ="menu-icon"></div>
+    </div>
+</header>
+<section class ="main-home">
+    <div class="main-text">
+        <h5>VinFast Việt Nam</h5>
+        <h1>VinFast <br>Mãnh Liệt Thành Công 2024</h1>
+        <p>Phủ xanh tương lai </p>
+        <a href="#" class = "main-btn" onclick="muangay()
+        ">Mua ngay<i class='bx bx-right-arrow-alt'></i></a>
+    </div>
+    <div class="down-arrow"> 
+        <a href="#trending" class="down"> <i class='bx bx-down-arrow-circle' ></i></a>
+    </div>
+</section>
+
+
+
+<!--phần xu hướng-sản phẩm-->
+
+
+
+<section class="trending-product" id ="trending">
+<div class = "center-text">
+    <h2>Xu Hướng <Span>2024</Span></h2>
+</div>
+<div class="products" id ="sp">
+
+
+
+
+<div class="row">
+    <div class="main-image">
+        <img src="./1vf9.webp" id="anh"   onclick="Sanphamvf9();">
+    </div>
+    <div class="product-text">
+    <h5>Hot</h5>
+    </div>
+    <div class="heart-icon">
+        <i class='bx bxs-heart' onclick="YeuThich(this);" ></i>
+     
+    </div>
+    <div class="ratting">
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star-half' ></i>
+    </div>
+
+    <div class="price">
+        <h4>VF9</h4>
+        <p>Giá:1 Tỷ 800 Triệu</p>
+
+        <button class="themvaogiohang" onclick="themVaoGioHang('VF9',1800000000)">Thêm vào giỏ hàng</button>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="main-image">
+       <img src="./2vf9.webp" id="anh1" onclick="Sanphamvf9plus();">
+    </div>
+    <div class="product-text">
+    <h5>Ưu Đãi</h5>
+    </div>
+    <div class="heart-icon">
+     
+        <i class='bx bxs-heart' onclick="YeuThich(this);" ></i>
+    </div>
+    <div class="ratting">
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star-half' ></i>
+    </div>
+    <div class="price">
+        <h4>VF9 Plus</h4>
+        <p>Giá:2 Tỷ 100 Triệu</p>
+     
+        <button class="themvaogiohang" onclick="themVaoGioHang('VF9 Plus',2100000000)">Thêm vào giỏ hàng</button>
+        
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="main-image">
+        <img src="./1vf8.webp" id="anh2" onclick="Sanphamvf8();">
+    </div>
+    <div class="product-text">
+    <h5>Ưu Đãi</h5>
+    </div>
+    <div class="heart-icon">
+        <i class='bx bxs-heart'onclick="YeuThich(this);" ></i>
+    </div>
+    <div class="ratting">
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star-half' ></i>
+    </div>
+    <div class="price">
+        <h4>VF8</h4>
+        <p>Giá:1 Tỷ 500 Triệu</p>
+     
+        <button class="themvaogiohang" onclick="themVaoGioHang('VF8',1500000000)">Thêm vào giỏ hàng</button>
+        
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="main-image">
+        <img src="./3vf8.webp" id="anh3"onclick="Sanphamvf8plus();">
+    </div>
+    <div class="product-text">
+    <h5>Hot</h5>
+    </div>
+    <div class="heart-icon">
+        <i class='bx bxs-heart' onclick="YeuThich(this);" ></i>
+
+    </div>
+    <div class="ratting">
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star'></i>
+        <i class='bx bxs-star-half' ></i>
+        <i class='bx bx-star' ></i>
+    </div>
+
+    <div class="price">
+        <h4>VF8 Plus</h4>
+        <p>Giá:1 Tỷ 600 Triệu</p>
+
+        <button class="themvaogiohang" onclick="themVaoGioHang('VF8 Plus',1600000000)">Thêm vào giỏ hàng</button>
+    </div>
+</div>
+</div>
+<div class="giohang1"></div>
+<br><br><br><br><br>
+</section>
+
+
+<!--Gio hang-->
+
+<div class="container">
+    <div class="giohang">
+      <h2>Giỏ hàng</h2>
+      
+      <ul id="dsgiohang"></ul>
+
+      <p onclick="tinhTongTien()">Thanh toán</p>
+
+      <p id="tong-tien"></p>
+
+      <h3>Thông tin khách hàng</h3>
+      <input type="text" id="ten" placeholder="Tên khách hàng">
+      <input type="text" id="dienthoai" placeholder="Số điện thoại">
+      <input type="text" id="diachi" placeholder="Địa chỉ">
+      <button onclick="datHang()">Đặt hàng</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!--Slideshow-->
+<section class="main-home2">
+    <img class="main-home3" src="./backgroupchuyenanh1.jpeg" id="anh10"  onclick="thayDoiAnh5();"style ="transition:opacity 0.2s ease-in-out;">
+    
+</section>
+
+
+
+
+
+
+
+
+
+<!--Phần Khách hàng đánh giá-->
+
+<section class="Client-Review">
+    <div class="reviews">
+        <h3>Khách Hàng Đánh Giá</h3>
+        <img src="./Jack and Sweet.jpg" alt="">
+        <p>Phải nói là sản phẩm bên VinFast cực tốt,nhất là con VF9 Pro Max,chạy rất là nhanh và khoẻ,Jack và Ngọt đã thử trải nghiệm phải nói là không có điểm nào để khen</p>
+        <h2>Jack and Ngọt </h2>
+        <p>The company CEO abandoned his child</p>
+    </div>
+</section>
+
+
+
+
+<!--Tin tức-->
+
+
+<section class="Update-news">
+<div class="up-center-text">
+<h2>Tin tức mới</h2>
+</div>
+
+<div class="update-cart">
+    <div class="cart">
+        <a href="https://thanhnien.vn/vinfast-vf9-chinh-thuc-den-tay-khach-viet-185230327141946403.htm"> <img src="./Newsvf9.webp" alt=""></a>
+        <h5>19/5/2024</h5>
+        <a href="https://thanhnien.vn/vinfast-vf9-chinh-thuc-den-tay-khach-viet-185230327141946403.htm">    <h4>Ra mắt sản phẩm xe điện VF9</h4></a>
+    
+        <p>Lô xe VinFast VF9 đầu tiên bàn giao đến tay khách Việt đã đặt trước, đây cũng là lần đầu tiên người dùng được tiếp cận bản thương mại của mẫu SUV cỡ lớn chạy bằng điện này.</p>
+        <h6>Còn nữa...</h6>
+    </div>
+
+
+            <div class="cart">
+                <a href="https://genk.vn/viruss-chot-don-toi-98-chiec-vinfast-vf-3-ngay-trong-lan-dau-livestream-doanh-thu-hon-31-ty-dong-2024051813204362.chn"><img src="./Viruss.webp" alt=""></a>
+                
+                <h5>19/5/2024</h5>
+                <a href="https://genk.vn/viruss-chot-don-toi-98-chiec-vinfast-vf-3-ngay-trong-lan-dau-livestream-doanh-thu-hon-31-ty-dong-2024051813204362.chn"> <h4>ViruSs "chốt đơn" tới 98 chiếc VinFast VF3</h4></a>
+               
+                <p>Lô xe VinFast VF9 đầu tiên bàn giao đến tay khách Việt đã đặt trước, đây cũng là lần đầu tiên người dùng được tiếp cận bản thương mại của mẫu SUV cỡ lớn chạy bằng điện này..</p>
+                <h6>Còn nữa...</h6>
+            </div>
+
+</div>
+</section>
+
+<!--Thông tin liên hệ-->
+
+<section class="contact">
+    <div class="contact-info" id ="info">
+        <div class="first-info">
+            <img src="./logoheader.jpeg" alt="">
+
+                <p>Trần Anh Tú</p>
+                <p>Mã sinh viên:1771020707</p>
+                <p>Tu05062005@gmail.com</p>
+
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/VinFastAuto.Official?locale=vi_VN"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://www.instagram.com/vinfastofficial/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/@vinfastofficial8424"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://x.com/VinFastofficial"><i class='bx bxl-twitter'></i></a>
+
+                </div>
+        </div>
+
+
+
+        <div class="second-info">
+            <h4>Hỗ Trợ</h4>
+            <p>Liên Hệ</p>
+            <p>Về Trang</p>
+            <p>Đặt Cọc</p>
+            <p>Ưu Đãi</p>
+        </div>
+
+        <div class="third-info">
+            <h4>Cửa Hàng</h4>
+            <p>Xe Máy</p>
+            <p>Otô</p>
+            <p>Giảm Giá</p>
+        </div>
+
+
+        <div class="fourth-info">
+            <h4>Group</h4>
+            <p>Vingroup</p>
+            <p>VinFast</p>
+            <p>Vinhomes</p>
+            <p>Vincom Retail</p>
+            <p>Vinpearl</p>
+        </div>
+<div class="five-info">
+    <h4>Chi Nhánh Chính</h4>
+    <p>Số 1-3 Nguyễn Văn Linh, Long Biên, Hà Nội</p>
+    <p>Số 1-3 Nguyễn Văn Linh, Long Biên, Hà Nội</p>
+    <p>Số 8, đường Phạm Hùng, Phường Mai Dịch, Quận Cầu Giấy, Hà Nội</p>
+</div>
+
+    </div>
+</section>
+
+<div class="end-text">
+    <p>Ⓒ Bản quyền thuộc tập đoàn Trần Tú</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
