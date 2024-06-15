@@ -100,16 +100,16 @@ setInterval(thayDoiAnh3, 2000);
 //Chuyeenr anh chinh
 var index5 = 1;
 var imgs5 = ["./backgroupchuyenanh1.jpeg", "./backgroupchuyenanh2.webp", "./backgroupchuyenanh3.jpeg"];
-var imgElement = document.getElementById("anh10");
+var img = document.getElementById("anh10");
 
 function thayDoiAnh5() {
-    imgElement.style.opacity ="0.87";
+    img.style.opacity ="0.87";
     setTimeout(function() {
-        imgElement.src = imgs5[index5];
+        img.src = imgs5[index5];
         index5++;
         if (index5 == imgs5.length)
             index5 = 0;
-        imgElement.style.opacity = "1";
+        img.style.opacity = "1";
     }, 180);
 }
 
@@ -195,7 +195,10 @@ function datHang() {
     } else {
         // Xử lý đặt hàng thành công
         alert("Đặt hàng thành công");
-
+         var ten = document.getElementById("ten").value = "";
+    var sdt = document.getElementById("dienthoai").value = "";
+    var diachi = document.getElementById("diachi").value = "";
+    var ten = document.getElementById("ten").focus();
     }
 }
 
